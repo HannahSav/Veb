@@ -1,118 +1,119 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-	"http://www.w3.org/TR/html4/strict.dtd">
-<html>
- 	<head>
- 		<meta http-equiv="Content-Type" content="text/html; 
- 	charset=utf-8">
- 		<title> кто прочитал, тот лох </title>
- 		<h3> Салмова Анна, Савон Ганна, группа Р3231, вариант 2721 </h3>
- 		 <link  href="css/head.css" type="text/css" rel="stylesheet" />
- 	</head>
+<!DOCTYPE HTML PUBLIC 
+	<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; 
+	charset=utf-8">
+	<title> кто прочитал, тот лох </title>
+	<h3> Салмова Анна, Савон Ганна, группа Р3231, вариант 2721 </h3>
+	<link  href="css/head.css" type="text/css" rel="stylesheet" />
+</head>
 <body>
 	<table>
 		<tr>
-		<td width="33%">Введите координаты своего города, чтобы проверить является ли он свалкой Москвы.</td>
-		<td width="33%" rowspan="50">
-			<div id = "chart">
-<svg width="310" height="310">
-<rect id="rect" height="310" width="310" fill="#E6E6FA" ></rect>
-<line stroke="#000000" x1="5" x2="305" y1="155" y2="155"></line>
-<line stroke="#000000" x1="155" x2="155" y1="5" y2="305"></line>
-<polygon points="155,5 163,15, 147 ,15" fill="#000000"></polygon>
-<polygon points="305,155 295,163 295,147" fill="#000000"></polygon>
-<text x="163" y="15" font-size="20" font-weight="700">Y</text>
-<text x="294" y="145" font-size="20" font-weight="700">X</text>
+			<td width="33%">Введите координаты своего города, чтобы проверить является ли он свалкой Москвы.</td>
+			<td width="33%" rowspan="50">
+				<div id = "chart">
+					<svg width="310" height="310">
+						<rect id="rect" height="310" width="310" fill="#E6E6FA" ></rect>
+						<line stroke="#000000" x1="5" x2="305" y1="155" y2="155"></line>
+						<line stroke="#000000" x1="155" x2="155" y1="5" y2="305"></line>
+						<polygon points="155,5 163,15, 147 ,15" fill="#000000"></polygon>
+						<polygon points="305,155 295,163 295,147" fill="#000000"></polygon>
+						<text x="163" y="15" font-size="20" font-weight="700">Y</text>
+						<text x="294" y="145" font-size="20" font-weight="700">X</text>
 
-<line stroke="#000000" x1="205" x2="205" y1="147" y2="163"></line>
-<line stroke="#000000" x1="255" x2="255" y1="147" y2="163"></line>
-<line stroke="#000000" x1="105" x2="105" y1="147" y2="163"></line>
-<line stroke="#000000" x1="55" x2="55" y1="147" y2="163"></line>
+						<line stroke="#000000" x1="205" x2="205" y1="147" y2="163"></line>
+						<line stroke="#000000" x1="255" x2="255" y1="147" y2="163"></line>
+						<line stroke="#000000" x1="105" x2="105" y1="147" y2="163"></line>
+						<line stroke="#000000" x1="55" x2="55" y1="147" y2="163"></line>
 
-<text x="200" y="145">R/2</text>
-<text x="250" y="145">R</text>
-<text x="95" y="145">-R/2</text>
-<text x="45" y="145">-R</text>
+						<text x="200" y="145">R/2</text>
+						<text x="250" y="145">R</text>
+						<text x="95" y="145">-R/2</text>
+						<text x="45" y="145">-R</text>
 
-<line stroke="#000000" x1="147" x2="163" y1="205" y2="205"></line>
-<line stroke="#000000" x1="147" x2="163" y1="255" y2="255"></line>
-<line stroke="#000000" x1="147" x2="163" y1="105" y2="105"></line>
-<line stroke="#000000" x1="147" x2="163" y1="55" y2="55"></line>
+						<line stroke="#000000" x1="147" x2="163" y1="205" y2="205"></line>
+						<line stroke="#000000" x1="147" x2="163" y1="255" y2="255"></line>
+						<line stroke="#000000" x1="147" x2="163" y1="105" y2="105"></line>
+						<line stroke="#000000" x1="147" x2="163" y1="55" y2="55"></line>
 
-<text x="165" y="110" >R/2</text>
-<text x="165" y="60">R</text>
-<text x="165" y="210">-R/2</text>
-<text x="165" y="260">-R</text>
+						<text x="165" y="110"> R/2</text>
+						<text x="165" y="60"> R</text>
+						<text x="165" y="210"> -R/2</text>
+						<text x="165" y="260"> -R</text>
 
-<polygon points="155,155 205,155 155,55" fill="blue" opacity="0.5"></polygon>
-<polygon points="55,155 155,155 155,105 55,105" fill="blue" opacity="0.5"></polygon>
-<path d="M 55 155
-A 100 100, 0, 0, 0, 155 255
-L 155 155 Z" fill="blue" opacity="0.5"/>
+						<polygon points="155,155 205,155 155,55" fill="blue" opacity="0.5"></polygon>
+						<polygon points="55,155 155,155 155,105 55,105" fill="blue" opacity="0.5"></polygon>
+						<path d="M 55 155
+						A 100 100, 0, 0, 0, 155 255
+						L 155 155 Z" fill="blue" opacity="0.5"/>
 
-</svg>
-</div>
-		</td>
-		<td>
-			<table>
-			<thead>
-			<tr>
-				<th width="25"> X </th>
-				<th width="25"> Y </th>
-				<th> Попал? </th>
-				<th> Текущее время </th>
-				<th> Время работы </th>
+						<div class="container">
+							<form action="card.php" method="post">
+								<tr>
+									<td> 
+										<form action="http://test.ru/x.php">
+											<p>X
+												<input type="text" name="koordx" size="15" maxlength="30"/>
+											</p>
+										</form>
+									</td>
+								</tr>
+								<tr>
+									<td> <form action="http://test.ru/y.php">
+										<p>Y
+											<input type="text"  name="koordy" size="15" maxlength="30"/>
+										</p>
+									</form>
+								</td>
+							</tr>
+							<tr>
+								<td width="500"> 
+									<p> Введите радиус глубины познания
+										<br />
+										<input type="radio" name="radius" value="1" />1
+										<input type="radio" name="radius" value="1.5" />1.5
+										<input type="radio" name="radius" value="2" />2
+										<input type="radio" name="radius" value="2.5" />2.5
+										<input type="radio" name="radius" value="3" />3
+									</p>
+									<button type="button">Ну шо там</button>
+								</form>
+							</td>
+						</tr>
+					</form>
+				</div>
+
+
+
+				<td>
+					<table>
+						<thead>
+							<tr>
+								<th width="25"> X </th>
+								<th width="25"> Y </th>
+								<th> Попал? </th>
+								<th> Текущее время </th>
+								<th> Время работы </th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr> 
+
+							</tr>
+
+						</tbody>
+					</table>
+				</td>
 			</tr>
-            </thead>
-            <tbody>
-            	<tr> 
+			<tr>
+				<td width="80">где 1-государственные новости, 3-перехваченные секретные разговоры</td>
+			</tr>
+			<tr>
+				<td> </td>
+			</tr>
+		</table>
 
-            	</tr>
-            		
-            </tbody>
-            </table>
-		</td>
-		</tr>
-		<tr>
-			<td> <form action="http://test.ru/x.php">
-				<p>X
-					<input type="text" name="koordx" size="15" maxlength="30"/>
-				</p>
-			</form>
-			</td>
-		</tr>
-		<tr>
-			<td> <form action="http://test.ru/y.php">
-				<p>Y
-					<input type="text" name="koordy" size="15" maxlength="30"/>
-				</p>
-			</form>
-			</td>
-		</tr>
-		<tr>
-			<td width="500"> <form action="http://test.ru/radius.php">
-				<p> Введите радиус глубины познания
-					<br />
-					<input type="radio" name="radius" value="1" />1
-					<input type="radio" name="radius" value="1.5" />1.5
-					<input type="radio" name="radius" value="2" />2
-					<input type="radio" name="radius" value="2.5" />2.5
-					<input type="radio" name="radius" value="3" />3
-				</p>
-			</form>
-			</td>
-		</tr>
-		<tr>
-			<td width="80">где 1-государственные новости, 3-перехваченные секретные разговоры</td>
-		</tr>
-		<tr>
-			<td> </td>
-		</tr>
-	</table>
+	</body>
 
-
-
-
-
-</body>
-
-</html>
+	</html>
