@@ -5,21 +5,20 @@ let rFlag=false;
 let xValues = ["-5","-4","-3","-2","-1","0","1","2","3"];
 let rValues = ["1","2","3","4","5"];
 
-function getX(){
-    return document.getElementById('xId').innerHTML;
-}
 
 function getY(){
     return document.getElementById('yId').value;
 }
 
-function getR(){
-    return document.getElementById('rId').innerHTML;
-}
 
-function checkX(x){
-    if ((x==='')) xFlag=false;
-    else xFlag=true;
+
+function checkX(){
+    var inp = document.getElementsByName('koordx');
+    for (var i = 0; i < inp.length; i++) {
+        if (inp[i].type == "radio" && inp[i].checked) {
+            xFlag = true;
+        }
+    }
 }
 
 function checkY(y){
@@ -27,24 +26,24 @@ function checkY(y){
     else if(y >= -5 && y <= 5) yFlag=true;
 }
 
-function checkR(r){
-    if (r===''){ rFlag=false; return;}
-    
-    rFlag=true;
+function checkR(){
+    var inp = document.getElementsByName('radius');
+    for (var i = 0; i < inp.length; i++) {
+        if (inp[i].type == "radio" && inp[i].checked) {
+            rFlag = true;
+        }
+    }
 }
 
 function createRequest(){
-	let x = getX();
     let y = getY();
-    let r = getR();
-
     xFlag=false;
     yFlag=false;
     rFlag=false;
-    checkX(x);
+    checkX();
     checkY(y);
-    checkR(r);
- 	if(!xFlag)document.getElementById('xText').innerHTML = ("хули Х не выбрал, мудак?" + y);
+    checkR();
+ 	if(!xFlag)document.getElementById('xText').innerHTML = "хули Х не выбрал, мудак?";
  	else document.getElementById('xText').innerHTML = "";
  	if(!yFlag)document.getElementById('yText').innerHTML = "либо не написан Y, либо ты не умеешь читать";
  	else document.getElementById('yText').innerHTML = "";
