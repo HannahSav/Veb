@@ -6,19 +6,19 @@ let xValues = ["-5","-4","-3","-2","-1","0","1","2","3"];
 let rValues = ["1","2","3","4","5"];
 
 function getX(){
-    return document.getElementById('koordx').innerHTML;
+    return document.getElementById('xId').innerHTML;
 }
 
 function getY(){
-    return document.getElementById('koordy').value;
+    return document.getElementById('yId').value;
 }
 
 function getR(){
-    return document.getElementById('radius').innerHTML;
+    return document.getElementById('rId').innerHTML;
 }
 
 function checkX(x){
-    if ((x==='') || (xValues.indexOf(x)===-1)) xFlag=false;
+    if ((x==='')) xFlag=false;
     else xFlag=true;
 }
 
@@ -28,13 +28,13 @@ function checkY(y){
 }
 
 function checkR(r){
-    if (r.length===0){ rFlag=false; return;}
-    for (let i=0; i<r.length; i++) if (rValues.indexOf(r[i])===-1){ rFlag=false; return;}
+    if (r===''){ rFlag=false; return;}
+    
     rFlag=true;
 }
 
 function createRequest(){
-    let x = getX();
+	let x = getX();
     let y = getY();
     let r = getR();
 
@@ -44,17 +44,12 @@ function createRequest(){
     checkX(x);
     checkY(y);
     checkR(r);
-    if (!xFlag) document.getElementById('koordX').innerHTML='Не выбрано значение X'; else document.getElementById('koordx').innerHTML=null;
-    if (!yFlag) document.getElementById('koordY').innerHTML='Введено недопустимое значение Y'; else document.getElementById('koordy').innerHTML=null;
-    if (!rFlag) document.getElementById('radius').innerHTML='Не выбрано значение R'; else document.getElementById('radius').innerHTML=null;
-
-    if (!rFlag || !yFlag || !xFlag) {
-        return;
-    }
-
-    for (let i=0; i<r.length; i++) {
-        $.get('card.php', {'koordx':x, 'koordy':y, 'radius':r[i]}, function (data) {document.getElementById('resultTable').innerHTML+=data;});
-    }
+ 	if(!xFlag)document.getElementById('xText').innerHTML = ("хули Х не выбрал, мудак?" + y);
+ 	else document.getElementById('xText').innerHTML = "";
+ 	if(!yFlag)document.getElementById('yText').innerHTML = "либо не написан Y, либо ты не умеешь читать";
+ 	else document.getElementById('yText').innerHTML = "";
+ 	if(!rFlag)document.getElementById('rText').innerHTML = "выберите R, pidor"; 
+ 	else document.getElementById('rText').innerHTML = "";
 }
 
 
