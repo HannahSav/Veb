@@ -5,16 +5,17 @@
 	charset=utf-8">
 	<title> кто прочитал, тот лох </title>
 	<h3> Салмова Анна, Савон Ганна, группа Р3231, вариант 2721 </h3>
-	<link  href="css/head.css" type="text/css" rel="stylesheet" />
+	
 </head>
 <body>
+	<script src ="script.js"></script>
 	<table width="60%">
 		<tr>
 			<td>
 				<table>
 					<tr><td width="33%">Введите координаты своего города, чтобы проверить является ли он свалкой Москвы.</td></tr>
-					<td><tr>
-						<form action = "card.php" method = "post">
+					<td>
+						<form id = "dataForm">
 							<div class="container">
 								<tr>
 									<td> 
@@ -22,49 +23,53 @@
 											<br />
 											<table>
 												<tr>
-													<td><input type="radio" name="koordx" value="-5" />-5</td>
-													<td><input type="radio" name="koordx" value="-4" />-4</td>
-													<td><input type="radio" name="koordx" value="-3" />-3</td>
+													<td><input type="radio" id = "xId" name="koordx" value="-5" />-5</td>
+													<td><input type="radio" id = "xId" name="koordx" value="-4" />-4</td>
+													<td><input type="radio" id = "xId" name="koordx" value="-3" />-3</td>
 												</tr>
 												<tr>
-													<td><input type="radio" name="koordx" value="-2" />-2</td>
-													<td><input type="radio" name="koordx" value="-1" />-1</td>
-													<td><input type="radio" name="koordx" value=" 0" />0</td>
+													<td><input type="radio" id = "xId" name="koordx" value="-2" />-2</td>
+													<td><input type="radio" id = "xId" name="koordx" value="-1" />-1</td>
+													<td><input type="radio" id = "xId" name="koordx" value=" 0" />0</td>
 												</tr>
 												<tr>
-													<td><input type="radio" name="koordx" value=" 1" />1</td>
-													<td><input type="radio" name="koordx" value=" 2" />2</td>
-													<td><input type="radio" name="koordx" value=" 3" />3</td>
+													<td><input type="radio" id = "xId" name="koordx" value=" 1" />1</td>
+													<td><input type="radio" id = "xId" name="koordx" value=" 2" />2</td>
+													<td><input type="radio" id = "xId" name="koordx" value=" 3" />3</td>
 												</tr>
 											</table>
 										</p>
+										<p id = "xText"></p>
 									</td>
 								</tr>
 								<tr>
 									<td>
 										<p>Y
-											<input type="text" pattern="(-[1-5])||([0-5])" name="koordy" size="15" maxlength="30" placeholder="от -5 до 5"/>
+											<input type="text" pattern="(-[1-5])||([0-5])" id = "yId"  name="koordy" size="15" maxlength="30" placeholder="от -5 до 5"/>
 										</p>
+										<p id = "yText"></p>
+										<br>
 									</td>
 								</tr>
 								<tr>
 									<td width="500"> 
 										<p> Введите радиус глубины познания
 											<br />
-											<input type="radio" name="radius" value="1" />1
-											<input type="radio" name="radius" value="1.5" />1.5
-											<input type="radio" name="radius" value="2" />2
-											<input type="radio" name="radius" value="2.5" />2.5
-											<input type="radio" name="radius" value="3" />3
+											<input type="radio" id = "rId" name="radius" value="1" />1
+											<input type="radio" id = "rId" name="radius" value="1.5" />1.5
+											<input type="radio" name="radius" id = "rId" value="2" />2
+											<input type="radio" name="radius" id = "rId" value="2.5" />2.5
+											<input type="radio" name="radius" id = "rId" value="3" />3
 										</p>
+										<p id = "rText"></p>
+										<br>
 									</td>
 								</tr>
 								<tr><td>
-									<button>Sub</button>
+									<input type = "button" id="submit" value="Давай, нападай!" onclick="createRequest()" >
 								</td></tr>
 							</div>
 						</form>	
-					</tr>
 				</td>
 			</table>
 		</td>
@@ -106,7 +111,7 @@
 			</svg>
 		</td>
 		<td>
-			<table>
+			<table id = "resultTable">
 				<thead>
 					<tr>
 						<th width="25"> X </th>
@@ -119,7 +124,7 @@
 				<tbody>
 					<tr> 
 						<td>
-						5</td> <td> часов</td> <td>утра</td> <td>ебать
+						5</td> <td> часов</td> <td>утра</td>
 					</td>
 					</tr>
 				</tbody>
