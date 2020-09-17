@@ -1,6 +1,8 @@
 let xFlag=false;
 let yFlag=false;
 let rFlag=false;
+let x = 100;
+let r = 100;
 
 let xValues = ["-5","-4","-3","-2","-1","0","1","2","3"];
 let rValues = ["1","2","3","4","5"];
@@ -17,6 +19,7 @@ function checkX(){
     for (var i = 0; i < inp.length; i++) {
         if (inp[i].type == "radio" && inp[i].checked) {
             xFlag = true;
+            x = xValues[i];
         }
     }
 }
@@ -31,13 +34,12 @@ function checkR(){
     for (var i = 0; i < inp.length; i++) {
         if (inp[i].type == "radio" && inp[i].checked) {
             rFlag = true;
+            r = rValues[i];
         }
     }
 }
 
 function createRequest(){
-    let x = 0;
-    let r = 6;
     let y = getY();
     xFlag=false;
     yFlag=false;
@@ -45,14 +47,12 @@ function createRequest(){
     checkX();
     checkY(y);
     checkR();
- 	if(!xFlag)document.getElementById('xText').innerHTML = "выберите X";
- 	else document.getElementById('xText').innerHTML = "";
- 	if(!yFlag)document.getElementById('yText').innerHTML = "выберите Y от -5 до 5";
- 	else document.getElementById('yText').innerHTML = "";
- 	if(!rFlag)document.getElementById('rText').innerHTML = "выберите R"; 
- 	else document.getElementById('rText').innerHTML = "";
+    if(!xFlag)document.getElementById('xText').innerHTML = "выберите X";
+    else document.getElementById('xText').innerHTML = "";
+    if(!yFlag)document.getElementById('yText').innerHTML = "выберите Y от -5 до 5";
+    else document.getElementById('yText').innerHTML = "";
+    if(!rFlag)document.getElementById('rText').innerHTML = "выберите R"; 
+    else document.getElementById('rText').innerHTML = "";
     if(xFlag && yFlag && rFlag)
         $.get('card.php', {'x':x, 'y':y, 'r':r}, function (data) {document.getElementById('resultTable').innerHTML+=data;});
 }
-
-

@@ -22,8 +22,8 @@
 							<div class="container">
 								<tr>
 									<td> 
-										<p id = "xText" class ="title"> X</p>
-										
+										<p>X
+											<br />
 											<table>
 												<tr>
 													<td><input type="radio" id = "xId" name="koordx" value="-5" />-5</td>
@@ -41,27 +41,30 @@
 													<td><input type="radio" id = "xId" name="koordx" value=" 3" />3</td>
 												</tr>
 											</table>
-										
+										</p>
+										<p id = "xText"></p>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<p id = "yText" class ="title"> Y
+										<p>Y
 											<input type="text" pattern="(-[1-5])||([0-5])" id = "yId"  name="koordy" size="15" maxlength="30" placeholder="от -5 до 5"/>
 										</p>
+										<p id = "yText"></p>
 										<br>
 									</td>
 								</tr>
 								<tr>
 									<td width="500"> 
-										<p id = "rText" class ="title"> Введите радиус глубины познания</p>
+										<p> Введите радиус глубины познания
 											<br />
 											<input type="radio" id = "rId1" name="radius" value="1" />1
 											<input type="radio" id = "rId1" name="radius" value="1.5" />1.5
 											<input type="radio" name="radius" id = "rId3" value="2" />2
 											<input type="radio" name="radius" id = "rId4" value="2.5" />2.5
 											<input type="radio" name="radius" id = "rId5" value="3" />3
-		
+										</p>
+										<p id = "rText"></p>
 										<br>
 									</td>
 								</tr>
@@ -118,6 +121,7 @@
 					<tr>
 						<th width="25"> X </th>
 						<th width="25"> Y </th>
+						<th width="25"> R </th>
 						<th> Попал? </th>
 						<th> Текущее время </th>
 						<th> Время работы </th>

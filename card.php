@@ -1,33 +1,61 @@
 <?php
 
-$x = (int)$_POST["koordx"];
-$y = (int)$_POST["koordy"];
-$r=(int)$_POST['radius'];
+function checkData($x,$y,$r){
+    if (($y<-5) or ($y>3)){
+        return false;
+    }
 
-var_dump($_POST);
-if (session_id() === "") {
-	session_start();
+    if (!is_numeric($x)) return false;
+
+    if (!is_numeric($r)) return false;
+
+    return true;
+
 }
-$start = microtime(true);
 
-date_default_timezone_set("UTC");
-$time = time() + 3 * 3600; 
-echo "<p id='time'>Текущее время: ".date("H:i:s", $time)."</p>";
 
-echo "Обработка данных: <br>";
+function checkHit($x,$y,$r){
 
-	$t=(float)round((microtime(true)-$start), 4);
-	if($t==0)$t="менее 0.0001";
-	echo "Время работы скрипта: ".$t." сек<br>";
-	echo $x;
-	echo $y;
-	echo $r;
-	echo "\n";
-	result($x, $y, $r);
-function result($x, $y, $r)	{
-	if($y % 2 == 1) echo "<tr>
+    if(($x>=0) and ($x<=$r) and ($y<=$r/2-$x/2) and ($y>=0)) return "ДА";
+
+    if (($x<=0) and ($x>=-$r/2) and ($y<=$r) and ($y>=0)) return "ДА";
+
+    if (($x>=0) and ($x<=$r) and ($y<=0) and ($x*$x+$y*$y<=$r*$r)) return "ДА";
+
+    return "НЕТ";
+}
+
+session_start();
+
+if ($_SERVER['REQUEST_METHOD'] != 'GET') {
+    http_response_code(400);
+    exit;
+}
+
+$startTime = microtime(true);
+
+$x = (double) $_GET['x'];
+$y = (double) $_GET['y'];
+$r = (double) $_GET['r'];
+
+
+if (!checkData($x,$y,$r)){
+    http_response_code(401);
+    exit;
+}
+
+$result = checkHit($x,$y,$r);
+date_default_timezone_set('Europe/Moscow');
+$currentTime = date("H:i:s");
+$executionTime = number_format((microtime(true)-$startTime)*1000000,3,".","");
+
+$response =
+    "<tr>
 <td>$x</td>
 <td>$y</td>
 <td>$r</td>
+<td>$result</td>
+<td>$currentTime</td>
+<td>$executionTime мкс</td>
 </tr>";
-	else echo "y четный, бля";
+echo $response;
