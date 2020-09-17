@@ -3,9 +3,9 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; 
 	charset=utf-8">
-	<link rel="stylesheet" href = "css/head.css">
+	<link rel="stylesheet" href = "style.css">
 	<title> кто прочитал, тот лох </title>
-	<h3> Салмова Анна, Савон Ганна, группа Р3231, вариант 2721 </h3>
+	<p class="head"> Салмова Анна, Савон Ганна, группа Р3231, вариант 2721 </p>
 	
 </head>
 <body>
@@ -22,8 +22,8 @@
 							<div class="container">
 								<tr>
 									<td> 
-										<p>X
-											<br />
+										<p id = "xText" class ="title"> X</p>
+										
 											<table>
 												<tr>
 													<td><input type="radio" id = "xId" name="koordx" value="-5" />-5</td>
@@ -41,30 +41,27 @@
 													<td><input type="radio" id = "xId" name="koordx" value=" 3" />3</td>
 												</tr>
 											</table>
-										</p>
-										<p id = "xText"></p>
+										
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<p>Y
+										<p id = "yText" class ="title"> Y
 											<input type="text" pattern="(-[1-5])||([0-5])" id = "yId"  name="koordy" size="15" maxlength="30" placeholder="от -5 до 5"/>
 										</p>
-										<p id = "yText"></p>
 										<br>
 									</td>
 								</tr>
 								<tr>
 									<td width="500"> 
-										<p> Введите радиус глубины познания
+										<p id = "rText" class ="title"> Введите радиус глубины познания</p>
 											<br />
 											<input type="radio" id = "rId1" name="radius" value="1" />1
 											<input type="radio" id = "rId1" name="radius" value="1.5" />1.5
 											<input type="radio" name="radius" id = "rId3" value="2" />2
 											<input type="radio" name="radius" id = "rId4" value="2.5" />2.5
 											<input type="radio" name="radius" id = "rId5" value="3" />3
-										</p>
-										<p id = "rText"></p>
+		
 										<br>
 									</td>
 								</tr>
@@ -79,13 +76,19 @@
 			</td>
 			<td width="200" rowspan="0">
 				<svg width="310" height="310">
-				<rect id="rect" height="310" width="310" fill="#E6E6FA" ></rect>
+				<rect id="rect" height="310" width="310" fill="#FFF0F0" ></rect>
 				<line stroke="#000000" x1="5" x2="305" y1="155" y2="155"></line>
 				<line stroke="#000000" x1="155" x2="155" y1="5" y2="305"></line>
 				<polygon points="155,5 163,15, 147 ,15" fill="#000000"></polygon>
 				<polygon points="305,155 295,163 295,147" fill="#000000"></polygon>
 				<text x="163" y="15" font-size="20" font-weight="700">Y</text>
 				<text x="294" y="145" font-size="20" font-weight="700">X</text>
+
+				<polygon points="155,155 205,155 155,55" fill="DeepPink" opacity="0.5"></polygon>
+				<polygon points="55,155 155,155 155,105 55,105" fill="DeepPink" opacity="0.5"></polygon>
+				<path d="M 55 155
+				A 100 100, 0, 0, 0, 155 255
+				L 155 155 Z" fill="DeepPink" opacity="0.5"/>
 
 				<line stroke="#000000" x1="205" x2="205" y1="147" y2="163"></line>
 				<line stroke="#000000" x1="255" x2="255" y1="147" y2="163"></line>
@@ -107,11 +110,6 @@
 				<text x="165" y="210"> -R/2</text>
 				<text x="165" y="260"> -R</text>
 
-				<polygon points="155,155 205,155 155,55" fill="blue" opacity="0.5"></polygon>
-				<polygon points="55,155 155,155 155,105 55,105" fill="blue" opacity="0.5"></polygon>
-				<path d="M 55 155
-				A 100 100, 0, 0, 0, 155 255
-				L 155 155 Z" fill="blue" opacity="0.5"/>
 				</svg>
 			</td>
 			<td>
