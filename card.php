@@ -25,8 +25,9 @@ echo "Обработка данных: <br>";
 	echo "\n";
 	result($x, $y, $r);
 function result($x, $y, $r)	{
-	if($y % 2 == 1) echo "ну ахуеть теперь";
+	if($y % 2 == 1) echo "<tr>
+<td>$x</td>
+<td>$y</td>
+<td>$r</td>
+</tr>";
 	else echo "y четный, бля";
-
-}
-?>

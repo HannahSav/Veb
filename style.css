@@ -1,0 +1,28 @@
+* {font-family:serif;
+ font-size: 12pt;
+}
+ 
+ p.head {top:30px;
+    text-align: left;
+    left: : 50pt;
+    font-size: 18pt;
+	color:pink;
+}
+
+body p.title { font-size: 14pt;
+	color: rgb(200,50,255);
+	font-weight: bold;
+}
+
+#submit {font-size: 12pt;
+	color:DeepPink;
+  	text-decoration: none;
+  	border-radius: 2px;
+  	background: rgb(255,200,200);
+  	box-shadow: 0 -3px rgb(200,50,255) inset;
+ 	transition: 0.2s;
+}
+
+table> thead {font-size: 12pt;
+	color:rgb(200,50,255);
+}
