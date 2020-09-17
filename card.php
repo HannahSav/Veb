@@ -1,7 +1,7 @@
 <?php
 
 function checkData($x,$y,$r){
-    if (($y<-5) or ($y>3)){
+    if (($y<-5) or ($y>5)){
         return false;
     }
 
@@ -16,11 +16,11 @@ function checkData($x,$y,$r){
 
 function checkHit($x,$y,$r){
 
-    if(($x>=0) and ($x<=$r) and ($y<=$r/2-$x/2) and ($y>=0)) return "ДА";
+    if(($x>=0) and ($x<=$r/2) and ($y<=$r-2*$x) and ($y>=0)) return "ДА";
 
-    if (($x<=0) and ($x>=-$r/2) and ($y<=$r) and ($y>=0)) return "ДА";
+    if (($x<=0) and ($x>=-$r) and ($y<=$r/2) and ($y>=0)) return "ДА";
 
-    if (($x>=0) and ($x<=$r) and ($y<=0) and ($x*$x+$y*$y<=$r*$r)) return "ДА";
+    if (($x<=0) and ($x>=-$r) and ($y<=0) and ($x*$x+$y*$y<=$r*$r)) return "ДА";
 
     return "НЕТ";
 }
