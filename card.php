@@ -1,18 +1,5 @@
 <?php
 
-function checkData($x,$y,$r){
-    if (($y<-5) or ($y>5)){
-        return false;
-    }
-
-    if (!is_numeric($x)) return false;
-
-    if (!is_numeric($r)) return false;
-
-    return true;
-
-}
-
 
 function checkHit($x,$y,$r){
 
@@ -34,15 +21,13 @@ if ($_SERVER['REQUEST_METHOD'] != 'GET') {
 
 $startTime = microtime(true);
 
+
+$y_txt = (string) $_GET['y'];
 $x = (double) $_GET['x'];
 $y = (double) $_GET['y'];
 $r = (double) $_GET['r'];
 
-
-if (!checkData($x,$y,$r)){
-    http_response_code(401);
-    exit;
-}
+if($y == 0 && $y_txt[0] == "-") $y = 0;
 
 $result = checkHit($x,$y,$r);
 date_default_timezone_set('Europe/Moscow');

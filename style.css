@@ -6,12 +6,39 @@
     text-align: left;
     left: : 50pt;
     font-size: 18pt;
-	color:pink;
+	color:rgb(255,49,198);
+  background: rgba(255, 255, 255, 0.7);
 }
 
-body p.title { font-size: 14pt;
-	color: rgb(200,50,255);
+#text1 {
+  color: rgb(189,0,159);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+#yId {
+  color: black;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+#xText {
+  color: red;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+#yText {
+  color: red;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+#rText {
+  color: red;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+body  { 
+  font-size: 14pt;
 	font-weight: bold;
+  background-image: url(bg2.png);
 }
 
 #submit {font-size: 12pt;
@@ -23,6 +50,14 @@ body p.title { font-size: 14pt;
  	transition: 0.2s;
 }
 
+#resultTable {
+    background: rgba(255, 255, 255, 0.7); /* Цвет фона таблицы */
+    color: rgb(189,0,159); /* Цвет текста */
+   
+}
+
+
 table> thead {font-size: 12pt;
 	color:rgb(200,50,255);
 }
+
