@@ -1,6 +1,5 @@
 <?php
 
-
 function checkHit($x,$y,$r){
 
     if(($x>=0) and ($x<=$r/2) and ($y<=$r-2*$x) and ($y>=0)) return "ДА";
@@ -14,7 +13,7 @@ function checkHit($x,$y,$r){
 
 session_start();
 
-if ($_SERVER['REQUEST_METHOD'] != 'GET') {
+if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     http_response_code(400);
     exit;
 }
@@ -22,10 +21,10 @@ if ($_SERVER['REQUEST_METHOD'] != 'GET') {
 $startTime = microtime(true);
 
 
-$y_txt = (string) $_GET['y'];
-$x = (double) $_GET['x'];
-$y = (double) $_GET['y'];
-$r = (double) $_GET['r'];
+$y_txt = (string) $_POST['y'];
+$x = (double) $_POST['x'];
+$y = (double) $_POST['y'];
+$r = (double) $_POST['r'];
 
 if($y == 0 && $y_txt[0] == "-") $y = 0;
 

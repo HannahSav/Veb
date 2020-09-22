@@ -54,5 +54,15 @@ function createRequest(){
     if(!rFlag)document.getElementById('rText').innerHTML = "выберите R"; 
     else document.getElementById('rText').innerHTML = "";
     if(xFlag && yFlag && rFlag)
-        $.get('card.php', {'x':x, 'y':y, 'r':r}, function (data) {document.getElementById('resultTable').innerHTML+=data;});
+
+        $.ajax({
+            type: "POST",
+            url: "card.php",
+            data: {x: x, y:y, r:r},
+            succsess: function(result){
+                $('.resultTable').append(result);
+            }
+
+        });
+        
 }
