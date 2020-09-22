@@ -9,9 +9,7 @@
 </head>
 <body>
 	<link rel="stylesheet" href = "css/style.css">
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-  	<script src="ajax.js"></script>
-	<script src ="script.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<table width="1000">
 		<tr>
 			<td>
@@ -121,9 +119,8 @@
 				</svg>
 			</td>
 			<td>
-			<div style="height:310px;overflow:scroll;width: 300px">
-			<table id = "resultTable">
-				<thead>
+			<div style="height:310px;overflow:auto;width: 300px">
+			<table class = "resultTable" id = "resultTable">
 					<tr>
 						<th width="25"> X </th>
 						<th width="25"> Y </th>
@@ -132,18 +129,11 @@
 						<th> Текущее время </th>
 						<th> Время работы </th>
 					</tr>
-				</thead>
-				<tbody>
-					<tr> 
-						<td>
-						
-					</td>
-					</tr>
-				</tbody>
 			</table>
 		</div>
 			</td>
 		</tr>
 	</table>
 </body>
+<script src ="script.js"></script>
 </html>

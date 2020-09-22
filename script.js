@@ -59,10 +59,10 @@ function createRequest(){
             type: "POST",
             url: "card.php",
             data: {x: x, y:y, r:r},
-            succsess: function(result){
-                $('.resultTable').append(result);
-            }
+            success: function (answer) {
+                    $('.resultTable').append(answer);
+                }
 
         });
-        
+        event.preventDefault()
 }
